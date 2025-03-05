@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapori di Italia</title>
+    <link rel="icon" href="/icons/icon.png">
+    <link rel="stylesheet" href="/css/product-page.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <script src="/js/menu.js" defer></script>
+    <script src="/js/add-cart.js" defer></script>
+    <script src="/js/order.js" defer></script>
+    <script src="/js/cart_menu.js" defer></script>
+</head>
+<body>
+  <body>
+    <%- include('../includes/header') %>
+
+     <main class="main">
+
+      <div class="breadcrumb">
+        <ol class="breadcrumb-product-info">
+            <li onclick="location.href='/cat'" class="product-info">Меню</li> 
+            <li class="product-info-separator">/</li>
+            <li class="product-info" onclick="location.href='/cat/<%= catname %>'"><%= titlCat %></li> 
+            <li class="product-info-separator">/</li>
+            <li onclick="location.href='/cat/<%= catname %>/<%= id %>'" class="product-info"><%= name %></li>
+        </ol>
+     </div>
+
+     <h2 class="main-title"><%= name %></h2>
+
+     <div class="content-box-img">
+       <img class="main-img-content" src="/images/<%= image %>"" alt="<%= name %>">
+     </div>
+     <div class="info">
+       <h3 class="title-pizza"><%= name %></h3> 
+       <h4 class="main-content-pizza-weight">Вага: <%= weight %> г</h4> 
+       <p class="main-content-pizza-ingredients">Склад: <%= ingredients %></p> 
+       <p class="main-content-pizza-text"><%= description %></p> 
+     </div>
+     <div class="main-content-pizza-cost">
+       <p><u><i>Ціна: <%= price.toFixed(2) %> грн</i></u></p> 
+     </div>
+
+     <div class="main-buttom">
+      <button class="button-add-to-cart" type="submit" data-id="<%= id %>">Додати до кошика</button>
+      <span class="cart-message"></span>
+     </div>
+
+     </main>
+     <div class="line"></div>
+  
+
+     <%- include('../includes/footer') %>
+</body>
+</html>

@@ -1,0 +1,8 @@
+model AuthKey {
+  authkey    String   @id @default(uuid()) 
+  user_Id    Int     
+  createdAt  DateTime @default(now())      
+  updatedAt  DateTime @updatedAt            
+
+  user       User     @relation(fields: [user_Id], references: [id]) 
+}

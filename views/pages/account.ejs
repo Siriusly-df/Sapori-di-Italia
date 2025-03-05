@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapori di Italia</title>
+    <link rel="icon" href="/icons/icon.png">
+    <link rel="stylesheet" href="/css/account.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <script src="/js/menu.js" defer></script>
+    <script src="/js/order.js" defer></script>
+    <script src="/js/cart_menu.js" defer></script>
+</head>
+<body>
+  <body>
+    <%- include('../includes/header') %>
+
+     <main class="main">
+
+     <h2 class="main-title">Акаунт</h2>
+     <div class = "profile">
+      <h2 class="profile-inform-1">Ім'я: <%= user.firstName %></h2 >
+      <h2 class="profile-inform">Email: <%= user.email %></h2>
+      <h2 class="profile-inform">Номер телефону: +<%= user.phone %></h2>
+      <h2 class="profile-inform">Адресса: <%= user.address %></h2>
+      <div class="div-btn-profile">
+        <button  onclick="location.href='/account/manage'" class="btn-profile">Змінити дані профілю</button>
+      </div>
+    
+     <h2 class="main-title-2">Замовлення</h2>
+
+
+     </main>
+
+     <div class="line"></div>
+
+     <%- include('../includes/footer') %>
+</body>
+</html>

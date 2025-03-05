@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+ @font-face {
+    src: url('../fonts/DancingScript-Bold.woff2') format('woff2');
+    font-family: "Dancing Script";
+    font-optical-sizing: auto;
+    font-weight: 400; 
+
+    font-style: normal;
+ }
+
+ :root {
+    --font-family-base: 'Dancing Script', sans-serif;
+ }
+
+
+ body {
+    margin: 0;
+    justify-content: center; 
+    background-color: rgb(255, 255, 255); 
+    background-image: url(../images/there-is-black-white-photo-person-holding-tennis-racket-generative-ai_1035767-4761.png);
+    background-size: cover;
+    background-position: center;
+}
+
+  .main {
+    position: absolute;
+    top: 70%; 
+    left: 50%; 
+    background-color: #F5F5DC;
+    height: 140%;
+    width: 60%;
+    overflow-y: auto; 
+    justify-content: space-between;
+    align-items: end;
+    transform: translate(-50%, -50%); 
+}
+
+
+.menu-container-1 {
+   display: flex; 
+   padding-top: 10%;
+   justify-content: center; 
+   align-items: center;
+}
+
+.menu-container-2 {
+  position: relative;
+  width: 800px;
+  padding: 15px;
+  background-color: burlywood;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: var(--font-family-base);
+}
+
+.menu-item-h {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #a3093d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menu-item {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #a3093d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  color: #8fb24a;
+}
+
+.menu-item-h:hover {
+  color: #8fb24a;
+}
+
+
+
+ .main-title {
+    display: flex; 
+    padding-top: 7%;
+    justify-content: center; 
+    align-items: center;
+    color: #353333;
+    font-family: var(--font-family-base);
+    font-weight: 600;
+    background: linear-gradient(to right, transparent 10%, #353333 50%, transparent 90%);
+    background-size: 50% 2px; 
+    background-position: bottom;
+    background-repeat: no-repeat;
+ }
+
+
+ .main-title-admin {
+  display: flex; 
+  padding-top: 15%;
+  justify-content: center; 
+  align-items: center;
+  color: #353333;
+  font-family: var(--font-family-base);
+  font-weight: 600;
+  background: linear-gradient(to right, transparent 10%, #353333 50%, transparent 90%);
+  background-size: 50% 2px; 
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+ .img-content {
+   width: 250px;
+   height: 200px;
+   object-fit: cover;
+ }
+
+.box-conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}
+
+.box-conteiner .box {
+  background-color: burlywood;
+  box-shadow: 0 1rem 2rem rgb(0,0,0,.8);
+  position: relative;
+  overflow: hidden;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.box-conteiner .box .img-content-menu {
+  text-align: center;
+}
+
+
+.box-conteiner .box .info {
+  padding: 1rem;
+  color: #a3093d;
+  font-family: var(--font-family-base);
+  font-weight: 600;
+}
+
+.box-conteiner .box .info .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    top: 141%; 
+    left: 50%; 
+    background-color: #424242;
+    height: 2%;
+    width: 60%;
+    transform: translate(-50%, -50%); 
+}
+
+
+ @media (max-width: 1400px) {
+  .menu-container-1 {
+    padding-top: 20%;
+ }
+
+}
+
+@media (max-width: 768px) {
+    .main {
+        height: 140%;
+        width: 80%;
+    }
+
+    .line {
+        height: 2%;
+        width: 80%;
+    } 
+}
+
+@media (max-width: 720px) {
+    .menu-container-1 {
+      padding-top: 35%;
+   }
+}
+
+
+@media (max-width: 500px) {
+    .main {
+        height: 140%;
+        width: 100%;
+    }
+
+
+    .line {
+        height: 2%;
+        width: 100%;
+    }
+
+
+    body {
+        background-image: none;
+    }
+
+    .menu-container-1 {
+      padding-top: 40%;
+   }
+}
+
+
+
+

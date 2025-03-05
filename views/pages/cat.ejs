@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sapori di Italia</title>
+  <link rel="stylesheet" href="./css/cat.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="icon" href="icons/icon.png">
+  <script src="./js/menu.js" defer></script>
+  <script src="/js/cart_menu.js" defer></script>
+  <script src="/js/order.js" defer></script>
+</head>
+
+<body>
+
+  <%- include('../includes/header') %>
+
+      
+    
+    <main class="main">
+       
+    <div class="menu-container-1">
+      <div class="menu-container-2">
+        <a href="/auth/register" class="menu-item-h"> Зареєструватися </a>
+        <a href="/auth" class="menu-item-h"> Авторизуватися </a>
+    </div>
+    </div>
+
+
+      <h2 class="main-title">Меню</h2>
+    
+      <div class="box-conteiner">
+        <% data.forEach(item => { %>  
+          <div onclick="location.href='<%= `/cat/${item.url}` %>'" class="box">
+            <div class="img-content-menu">
+              <img class="img-content" src="/images/cat/<%= item.image %>" alt="<%= item.title %>">
+            </div>
+            <div class="info">
+              <h3 class="title"><%= item.title %></h3>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </main>
+  
+
+    <div class="line"></div>
+
+    <%- include('../includes/footer') %>
+</body>
+</html>

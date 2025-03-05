@@ -1,0 +1,22 @@
+{
+    "pizza": {
+        "url": "pizza",
+        "title": "Піца",
+        "image": "65dc7b4dc69e5.png"
+    },
+    "first-dishes": {
+        "url": "first-dishes",
+        "title": "Перші стравиа",
+        "image": "hj.png"
+    },
+    "main-dishes": {
+        "url": "main-dishes",
+        "title": "Основні страви",
+        "image": "italy-cuisine-lasagna.png"
+    },
+    "desserts": {
+        "url": "desserts",
+        "title": "Десерти",
+        "image": "pana-kota.png"
+    }
+}

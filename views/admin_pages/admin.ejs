@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sapori di Italia</title>
+  <link rel="stylesheet" href="../css/cat.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="icon" href="../icons/icon.png">
+  <script src="../js/menu.js" defer></script>
+</head>
+
+<body>
+
+  <%- include('./includes_admin/header_admin') %>
+
+      
+    <h2 class="main-title">Головна</h2>
+
+    <main class="main">
+
+        <h2 class="main-title-admin">Редагування меню</h2>
+      
+        <div class="box-conteiner">
+          <% data.forEach(item => { %>  
+            <div onclick="location.href='/admin/cat/category=<%= item.id %>'" class="box">
+              <div class="img-content-menu">
+                <img class="img-content" src="/images/cat/<%= item.image %>" alt="<%= item.title %>">
+              </div>
+              <div class="info">
+                <h3 class="title"><%= item.title %></h3>
+              </div>
+            </div>
+          <% }); %>
+        </div>
+      </main>
+
+    <div class="line"></div>
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+/*Налаштування сторінки*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+ @font-face {
+    src: url('../fonts/DancingScript-Bold.woff2') format('woff2');
+    font-family: "Dancing Script";
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-style: normal;
+ }
+
+ :root {
+    --font-family-base: 'Dancing Script', sans-serif;
+ }
+
+ body {
+    width: 100%; 
+    height: 100vh;
+    background-color: lightblue; /* Тестовий колір */  
+    background: url(../images/titka-bella-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*Номер телефона*/
+.header-number-phone {
+     display: flex;
+     align-items: center;
+}
+
+.header-icons-phone {
+    height: 35px;
+}
+
+.number-phone {
+   color: #ffffff;
+   font-family: var(--font-family-base);
+   font-weight: 800;
+}
+
+
+/*Панель меню*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Використовуєм rgba */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    box-shadow: 0 5px 10px #000;
+    padding-block: 15px;
+    z-index: 1000; /* Задает высокий уровень наложения */
+}
+
+/*Логотип*/
+.header-logo {
+    font-size: 30px;
+    font-weight: 900;
+    color: #ffffff;
+    transition: .5s;
+    font-family: var(--font-family-base);
+    
+}
+
+.header-logo:hover {
+    transform: scale(1.2);
+}
+
+header nav ul li {
+    float: left;
+}
+
+/*Кнопки меню*/
+header nav ul li a{
+   padding: 12px;
+   color:#ffffff;
+   font-size: 16px;
+   display: block;
+   text-transform: uppercase;
+   cursor: pointer;
+   font-family: var(--font-family-base);
+   font-weight: 600;
+}
+
+.buttom-menu:hover::before {
+    width: 100%;
+}
+
+header nav ul li a:hover{
+   background: #a3093d;
+   color: #fff;
+}
+
+nav ul li ul {
+    position: absolute;
+    left: 0;
+    width: 180px;
+    background: #a3093d;
+    display: none;
+}
+
+nav ul li ul li {
+   width: 100%;
+}
+
+nav ul li:hover > ul {
+  display: initial;
+} 
+
+
+  .burger-menu {
+    display: none;
+    position: relative; /* Оринтеровка для псевдо классов */
+    z-index: 1000;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+  }
+
+  .burger-menu span {
+    height: 2px;
+    width: 100%;
+    transform: scale(1);
+    background-color: #fff;
+  }
+
+  .burger-menu::before, .burger-menu::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    transition: all 0.3% ease 0s;
+  }
+  
+  .burger-menu::before { top: 0 }
+  .burger-menu::after  { bottom: 0 }
+
+
+  /* Добавления класа active для анимации кнопки бургера  */
+  .burger-menu.active span { transform: scale(0);}
+
+  .burger-menu.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+  }
+
+  .burger-menu.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+  }
+ 
+
+.main-representative {
+    position: fixed; /* Обычное позиционирование */
+    margin-top: 400px; /* Отступ сверху равен высоте меню */
+    width: 100%; /* На всю ширину */
+    height: 30vh; /* Высота экрана */
+    display: flex;
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: center; /* Вертикальное центрирование */
+    text-align: center; /* Выравнивание текста */
+    flex-direction: column; /* Размещаем содержимое вертикально */
+    
+}
+
+
+/*Центральна Кнопка Меню */
+button {
+    padding: 25px 100px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    background-color: #a3093d;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 2px;
+    box-shadow: 0px 5px 10px #000;
+    position: relative;
+    font-family: var(--font-family-base);
+    font-weight: 600;
+}
+
+/*Центральний Заголовок */
+.main-titles {
+    position: absolute;
+    font-size: 100px;
+    color: #fff;
+    text-shadow: 0px 5px 10px #000;
+    margin-bottom: 400px; /* Отступ ниже заголовка */
+    font-family: var(--font-family-base);
+    font-weight: 1000;
+}
+
+.main-text {
+    position: absolute;
+    font-size: 50px;
+    color: #fff;
+    text-shadow: 0px 5px 10px #000;
+    margin-bottom: 170px; /* Отступ ниже текста */
+    font-family: var(--font-family-base);
+    font-weight: 600;
+}
+
+
+@media (max-width: 1100px) {
+
+    .header { 
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .header-menu {
+        flex-wrap: wrap;
+       order: 1;
+       flex-basis: 100%;
+    }
+    .search-bar {
+        flex-wrap: wrap;
+        order: 1;
+    }
+
+
+  .burger-menu { display: flex;}
+  
+  .header-menu {
+    display: none;
+    flex-direction: column;
+    height: 40%;
+    width: 100%;
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 50px 40px;
+    background-color: #424242;
+    animation: burgerAnimation 0.4s;
+  }
+
+  .header-menu.open {
+    display: flex; /* Меню становится видимым при наличии класса open */
+    position: fixed;
+  }
+
+  .header-menu ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  @keyframes  burgerAnimation {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+}
+
+
+@media (max-width: 585px) {
+    .main-titles {
+        font-size: 16vw; /* Заголовок станет крупнее на маленьких экранах */
+    }
+    .main-text {
+        font-size: 9vw; /* Основной текст станет крупнее */
+    }
+    button {
+        padding: 25px 60px; /* Уменьшим размер кнопки */
+        font-size: 19px; /* Размер текста внутри кнопки */
+    }
+}
+
+
+
+
+
+
+

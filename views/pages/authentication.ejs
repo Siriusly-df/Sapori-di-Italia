@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapori di Italia</title>
+    <link rel="stylesheet" href="../css/registration.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="icon" href="icons/icon.png">
+    <script src="../js/menu.js" defer></script>
+    <script src="../js/cart_menu.js" defer></script>
+    <script src="../js/order.js" defer></script>
+    <script src="/js/togglePassword.js" defer></script>
+    <script src="/js/input-trim.js" defer></script>
+</head>
+<body>
+    <%- include('../includes/header') %>
+      
+    <main class="main">
+
+       
+        <div class="container">
+            <div class="registration-container">
+                <h1>Авторизація</h1>
+                <form action="/auth/login" method="POST">
+                  <div class="form-group">
+                  <div class="form-group">
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="sergiy@gmail.com ">
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" required placeholder="Не менше 8 символів" minlength="8">
+                    <button type="button" id="togglePassword">👁</button>
+                  </div>
+                  <div class="form-actions">
+                    <button type="submit">Увійти</button>
+                  </div>
+                </form>
+            </div>
+        </div>
+    
+     </main>
+ 
+      <div class="line"></div>
+
+      <%- include('../includes/footer') %>
+      
+</body>
+</html>

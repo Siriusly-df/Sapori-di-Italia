@@ -1,0 +1,28 @@
+<header class="header">
+  <% let logo = { title: 'Sapori di Italia', url: '/' };%>
+  <a href="<%= logo.url %>" class="header-logo"><%= logo.title %></a>
+      <nav class="header-menu">
+        <ul>
+          <% let menu = [
+          { title: 'Головна', url: '/admin/cat' },
+          { title: 'Перехід на Сайт', url: '/cat' },
+          { title: 'Замовлення', url: '#' },
+        ]; %>
+
+        <% if (menu[0]) { %>
+          <li><a class="buttom-menu" href="<%= menu[0].url %>"><%= menu[0].title %></a></li>
+         <% } %>
+         <% if (menu[1]) { %>
+          <li><a class="buttom-menu" href="<%= menu[1].url %>"><%= menu[1].title %></a></li>
+         <% } %>
+         <% if (menu[2]) { %>
+          <li><a class="buttom-menu" href="<%= menu[2].url %>"><%= menu[2].title %></a></li>
+         <% } %>
+        </ul>
+      </nav>
+
+      <div class="burger-menu">
+        <span></span>
+      </div>
+  </header>
+  

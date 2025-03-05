@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapori di Italia</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="icons/icon.png">
+    <script src="../js/menu.js" defer></script>
+</head>
+
+
+<body>
+    <header class="header">
+     <% let logo = { title: 'Sapori di Italia', url: '/' };%>
+     <a href="<%= logo.url %>" class="header-logo"><%= logo.title %></a>
+     </p>
+        <nav class="header-menu">
+        <ul>
+          <% let menu=[ { title: 'Головна' , url: '/cat' }, { title: 'Про нас' , url: '/about_us' }]; %>
+          <% menu.forEach(item=> { %>
+            <li><a class="buttom-menu" href="<%= item.url %>"><%= item.title %></a></li>
+          <% }) %>
+        </ul>
+      </nav>
+      <div class="burger-menu">
+        <span></span>
+      </div>
+    </header>
+
+    
+    <% let buttom = { title: 'На головну' , url: '/cat' }; %>
+     <div class="main-representative">
+     <h1 class="main-titles">Sapori di Italia</h2>
+     <p class="main-text">Влаштуйте італійське свято прямо вдома</p>
+     <button type="button" onclick="location.href='<%= buttom.url %>'"><%= buttom.title %></button>
+     </div>
+     
+</body>
+</html>

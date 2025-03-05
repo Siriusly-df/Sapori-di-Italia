@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sapori di Italia</title>
+  <link rel="stylesheet" href="/css/admin-panel.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="icon" href="/icons/icon.png">
+  <script src="/js/menu.js" defer></script>
+  <script src="/js/update-product.js" defer></script>
+  <script src="/js/dalete-product.js" defer></script>
+</head>
+
+<body>
+
+  <%- include('./includes_admin/header_admin') %>
+
+
+    <main class="main">
+
+      <div class="breadcrumb">
+        <ol class="breadcrumb-product-info">
+            <li onclick="location.href='/admin/cat'" class="product-info">Категорії</li> 
+            <li class="product-info-separator">/</li>
+            <li class="product-info" onclick="location.href='/admin/cat/category=<%= categoryId %>'"><%= title %></li>
+            <li class="product-info-separator">/</li>
+            <li class="product-info" >Редагування страви: <%= name %></li> 
+        </ol>
+     </div>
+
+          <div class="container">
+            <div class="registration-container">
+              <h1>Редагувати страву: <%= name %></h1>
+
+              <form class="update-product-form"  >
+                <div class="form-group">
+                    <label for="name">Назва страви:</label>
+                    <input type="text" id="name" name="name" value="<%= name %>" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="description">Опис страви:</label>
+                    <textarea id="description" name="description"><%= description %></textarea>
+                </div>
+            
+                <div class="form-group">
+                    <label for="price">Ціна (грн):</label>
+                    <input type="number" id="price" name="price" step="0.01" value="<%= price %>" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="weight">Вага (г):</label>
+                    <input type="text" id="weight" name="weight" value="<%= weight %>">
+                </div>
+            
+                <div class="form-group">
+                    <label for="ingredients">Інгредієнти:</label>
+                    <textarea id="ingredients" name="ingredients"><%= ingredients %></textarea>
+                </div>
+            
+                <div class="form-group">
+                    <label for="image">Введіть зображення страви:</label>
+                    <input type="text" id="image" name="image" placeholder="Введіть назву зображення" value="<%= image %>" required>
+                </div>
+
+                <input type="hidden" id="id" name="id" value="<%= id %>">
+            
+                <div class="form-actions">
+                    <button type="submit" id="submit-button">Оновити страву</button>
+                </div>
+            </form>
+
+              <div class="form-actions-delete">
+                <button class="btn-delete-product" data-product-id="<%= id %>" data-category-id="<%= categoryId %>">Видалити страву</button>
+              </div>
+
+            </div>
+          </div>
+    </main>
+
+    <div class="line"></div>
+
+
+</body>
+</html>

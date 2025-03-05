@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+ @font-face {
+    src: url('../fonts/DancingScript-Bold.woff2') format('woff2');
+    font-family: "Dancing Script";
+    font-optical-sizing: auto;
+    font-weight: 400; 
+
+    font-style: normal;
+ }
+
+ :root {
+    --font-family-base: 'Dancing Script', sans-serif;
+ }
+
+
+ body {
+    margin: 0;
+    justify-content: center; 
+    background-color: rgb(255, 255, 255); 
+    background-image: url(../images/there-is-black-white-photo-person-holding-tennis-racket-generative-ai_1035767-4761.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+  .main {
+    position: absolute;
+    top: 70%; 
+    left: 50%; 
+    background-color: #F5F5DC;
+    height: 140%;
+    width: 60%;
+    overflow-y: auto; 
+    justify-content: space-between;
+    align-items: end;
+    transform: translate(-50%, -50%); 
+}
+
+.breadcrumb { 
+  display: flex; 
+  padding-top: 15%;
+ }
+
+ .breadcrumb-product-info {
+   display: flex;
+   align-items: center;
+   background-color: #a3093d;
+   border-radius: 5%;
+   width: 100%;
+   height: 50px;
+ }
+
+ .product-info {
+  color: #ffffff;
+  padding: 10px;
+  font-family: var(--font-family-base);
+  font-weight: 600;
+  cursor: pointer;
+ }
+
+ .product-info:hover {
+  color: #8fb24a;
+ }
+
+ .product-info-separator {
+  color: #ffffff;
+  font-family: var(--font-family-base);
+  font-weight: 600;
+ }
+
+
+
+.container {
+    padding-top: 8%;
+}
+.registration-container {
+    width: 70%;
+    margin: 50px auto;
+    padding: 50px;
+    background-color: #f7e1b5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  h1 {
+    display: flex;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"],
+  .form-group input[type="tel"],
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .form-group input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  .form-group textarea {
+    resize: none;
+    height: 80px;
+  }
+
+  .form-group .note {
+    font-size: 12px;
+    color: #777;
+  }
+
+  .form-actions {
+    text-align: center;
+  }
+
+  .form-actions button {
+    padding: 10px 20px;
+    background-color: #a3093d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .form-actions-delete button {
+    padding: 10px 20px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .form-actions button:hover {
+    background-color:  #8fb24a;
+  }
+
+
+
+.line {
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    top: 141%; /* Центр по вертикали */
+    left: 50%; /* Центр по горизонтали */
+    background-color: #424242;
+    height: 2%;
+    width: 60%;
+    transform: translate(-50%, -50%); /* Сдвигаем элемент на 50% его ширины и высоты */
+}
+
+
+
+@media (max-width: 768px) {
+    .main {
+        height: 140%;
+        width: 80%;
+    }
+
+    .container {
+        padding-top: 25%;
+    }
+
+    .registration-container {
+        width: 90%;
+
+      }
+
+
+    .line {
+        height: 2%;
+        width: 80%;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+    .main {
+        height: 140%;
+        width: 100%;
+    }
+
+    .container {
+        padding-top: 40%;
+    }
+
+
+    .line {
+        height: 2%;
+        width: 100%;
+    }
+
+
+    body {
+        background-image: none;
+    }
+
+}
+
+

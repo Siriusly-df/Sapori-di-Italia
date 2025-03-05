@@ -1,0 +1,82 @@
+<header class="header">
+  <% let logo = { title: 'Sapori di Italia', url: '/' };%>
+    <a href="<%= logo.url %>" class="header-logo"><%= logo.title %></a>
+    <nav class="header-menu">
+      <ul>
+        <% let menu = [
+          { title: 'Головна', url: '/cat' },
+          { title: 'Про нас', url: '/about_us' },
+          { title: 'Контакти', url: '#' },
+          { title: 'ЗАМОВИТИ', url: '/order' },
+          { title: 'Акаунт', url: '/account' },
+          { title: 'Адмін', url: '/admin/cat' },
+        ]; %>
+
+        <% if (menu[0]) { %>
+         <li><a class="buttom-menu" href="<%= menu[0].url %>"><%= menu[0].title %></a></li>
+        <% } %>
+        <% if (menu[1]) { %>
+         <li><a class="buttom-menu" href="<%= menu[1].url %>"><%= menu[1].title %></a></li>
+        <% } %>
+        <% if (menu[2]) { %>
+         <li><a class="buttom-menu" href="<%= menu[2].url %>"><%= menu[2].title %></a></li>
+        <% } %>
+         <% if (menu[3]) { %>
+          <li class="buttom-menu" id="main-cart"> 
+            <div class="overlay" id="cart-overlay">
+              <div class="cart-popup">
+                <div class="cart-header">
+                  <span>КОШИК</span>
+                </div>
+                <div class="cart-items">
+                  <table class="cart-table">
+                    <thead>
+                      <tr>
+                        <th>Фото</th>
+                        <th>Назва</th>
+                        <th>Кількість</th>
+                        <th>Ціна за одиницю</th>
+                        <th>Сума</th>
+                      </tr>
+                    </thead>
+                    <tbody >
+
+                    </tbody>
+                  </table>
+                </div>
+                <div class="cart-summary">
+                  <div class="summary-row">
+                    <span>Разом: <span id="total-price">0 грн</span></span>
+                  </div>
+                </div>
+                <div class="cart-actions">
+                  <button onclick="window.location='<%= menu[3].url %>'" class="view-cart-btn"><%= menu[3].title %></button>
+                  <button class="back-btn" id="close-cart">ЗАКРИТИ</button>
+                </div>
+              </div>
+            </div>
+            <a id="open-cart" class="buttom-menu">Кошик</a>
+          </li>
+        <% } %>
+
+
+      <% if (isAuth) { %>
+        
+         <% if (menu[4]) { %>
+          <li><a class="buttom-menu" href="<%= menu[4].url %>"><%= menu[4].title %></a></li>
+          <li><a class="buttom-menu" href="/auth/logout">Вийти</a></li>
+         <% } %>
+         <% if (isAdmin) { %>
+          <li><a class="buttom-menu" href="/admin/cat">Адмін панель</a></li>
+         <% } %>
+        
+        <% } else { %>
+          <li><a class="buttom-menu" href="/auth">Увійти</a></li>
+      <% } %>
+      </ul>
+    </nav>
+
+    <div class="burger-menu">
+      <span></span>
+    </div>
+</header>

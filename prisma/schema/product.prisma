@@ -1,0 +1,13 @@
+model Product {
+  id          Int       @id @default(autoincrement())
+  name        String    
+  description String?   
+  price       Decimal   @db.Decimal(10, 2)  
+  weight      String?  
+  ingredients String?   
+  categoryId  Int      
+  image       String    
+
+  category    Category  @relation(fields: [categoryId], references: [id]) // Связь с категорией
+  orderItems  OrderItems[]
+}

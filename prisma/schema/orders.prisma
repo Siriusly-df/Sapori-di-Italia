@@ -1,0 +1,12 @@
+model Orders {
+  id        Int      @id @default(autoincrement())  
+  uid       String     
+  user_id   Int?     
+  state     Int      @default(1) 
+  cart      String   @db.VarChar(100)  
+  created_at Int     
+
+  user        User?    @relation(fields: [user_id], references: [id], onDelete: Cascade) 
+  orderItems OrderItems[] 
+}
+

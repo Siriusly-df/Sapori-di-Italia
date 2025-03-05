@@ -1,0 +1,185 @@
+.footer {
+    position: absolute;
+    top: 157%; /* Центр по вертикали */
+    left: 50%; /* Центр по горизонтали */
+    background-color: #a3093d;
+    height: 30%;
+    width: 60%;
+    justify-content: space-between; /* Расстояние между дочерними элементами */
+    align-items: center; /* Вертикальное центрирование содержимого внутри */
+    transform: translate(-50%, -50%); /* Сдвигаем элемент на 50% его ширины и высоты */
+ }
+
+ /* Соціальні мережі */
+ .social-networks {
+    display: flex; 
+    gap: 10px;
+    padding-left: 44%;
+ }
+
+ .footer-title-social-networks{
+   display: flex;
+   padding-left: 42%;
+   padding-top: 1%;
+   color: #ffffff;
+   font-family: var(--font-family-base);
+   font-weight: 800;
+ }
+
+ .footer-social-networks-1 {
+   width: 35px;
+   display: flex;
+   cursor: pointer;
+   padding-top: 1%;
+ }
+
+ .footer-social-networks-2 {
+   width: 35px;
+   cursor: pointer;
+   padding-top: 1%;
+ }
+
+
+ /*Номер телефона*/
+ .footer-title-number-phone {
+   display: flex;
+   align-items: center;
+   color: #ffffff;
+   font-family: var(--font-family-base);
+   font-weight: 800;
+   padding-left: 44%;
+   padding-top: 1%;
+ }
+
+ .footer-icons-phone-1 {
+  width: 30px;
+ }
+
+ .footer-number-phone-1 {
+  display: flex;
+  align-items: center;
+  padding-top: 1%;
+  padding-left: 39%;
+ }
+
+ 
+ .footer-number-phone-2 {
+  display: flex;
+  align-items: center;
+  padding-top: 1%;
+  padding-left: 39%;
+ }
+
+
+ .number-phone {
+  color: #ffffff;
+  font-family: var(--font-family-base);
+  font-weight: 200;
+ }
+ 
+ .footer-box-number-phone {
+  background: linear-gradient(to right, transparent 10%, #ffffff 50%, transparent 90%);
+  background-size: 90% 2px; /* Высота линии */
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding-bottom: 10px;
+ }
+
+ .footer-content-text {
+  display: flex;
+  padding-left: 70%;
+  padding-top: 2%;
+  color: #ffffff;
+  font-family: var(--font-family-base);
+  font-weight: 200;
+ }
+
+ @media (max-width: 768px) {
+    .footer {
+      top: 158%; 
+      height: 33%;
+      width: 80%;
+  }
+    
+}
+
+
+@media (max-width: 500px) {
+    .footer {
+      top: 164%; 
+      height: 45%;
+      width: 100%;
+  }
+
+    .footer-content-text {
+      padding-top: 4%;
+      padding-left: 50%;
+    }
+
+
+    .footer-title-social-networks {
+      padding-left: 36%;
+      padding-top: 10%;
+    }
+
+    .social-networks {
+      padding-left: 40%;
+    }
+
+
+    .footer-title-number-phone {
+      padding-left: 40%;
+    }
+
+    .footer-number-phone-1 {
+      padding-left: 27%;
+    }
+
+    .footer-number-phone-2 {
+      padding-left: 27%;
+    }
+
+    .breadcrumb {  
+      padding-top: 42%;
+    }
+
+}
+
+
+@media (max-width: 347px) {
+    .title-number-phone {
+      padding-left: 70%;
+    }
+  }
+  
+
+  @media (max-width: 320px) {
+
+    .footer-content-text {
+     padding-top: 4%;
+     padding-left: 50%;
+   }
+   
+   
+   .footer-title-social-networks {
+     padding-left: 32%;;
+   }
+   
+   .social-networks {
+     padding-left: 38%;
+   }
+   
+   
+   .footer-title-number-phone {
+     padding-left: 38%;
+   }
+   
+   .footer-number-phone-1 {
+     padding-left: 21%;
+   }
+   
+   .footer-number-phone-2 {
+     padding-left: 21%;
+   }
+   
+   }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapori di Italia</title>
+    <link rel="stylesheet" href="/css/product-cards.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="icon" href="/icons/icon.png">
+    <script src="/js/menu.js" defer></script>
+</head>
+<body>
+  <body>
+
+    <%- include('./includes_admin/header_admin') %>
+
+    <main class="main">
+
+      <div class="breadcrumb">
+        <ol class="breadcrumb-product-info">
+          <li onclick="location.href='/admin/cat'" class="product-info">Категорії</li> 
+          <li class="product-info-separator">/</li>
+          <li class="product-info" onclick="location.href='/admin/cat/category=<%= categoryId %>'"><%= title %></li> 
+        </ol>
+      </div>
+    
+      <h2 class="main-title">Редагувати категорію: <%= title %></h2>
+
+      <div class="main-add-product-btn">
+        <button class="add-product-btn" onclick="location.href='/admin/cat/category=<%= categoryId %>/add-product'">Додати страву</button>
+      </div>
+
+    
+      <div class="box-conteiner">
+        <% data.forEach(item => { %> 
+          <div onclick="location.href='<%= `/admin/cat/category=${item.categoryId}/product=${item.id}/manage-product` %>'" class="box">
+            <div class="img-content-menu">
+              <img class="img-content" src="/images/<%= item.image %>" alt="<%= item.name %>">
+            </div>
+            <div class="info">
+              <h3 class="title"><%= item.name %></h3>
+            </div>
+          </div>
+        <% }); %>
+      </div> 
+      
+     </main>
+
+     <div class="line"></div>
+
+</body>
+</html>

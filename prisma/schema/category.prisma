@@ -1,0 +1,8 @@
+model Category {
+  id       Int       @id @default(autoincrement()) // Уникальный идентификатор категории
+  key      String    @unique                      // Уникальный ключ категории (например, "pizza")
+  url      String                                 // URL категории
+  title    String                                 // Название категории
+  image    String                                 // Изображение категории
+  products Product[]                              // Связь: одна категория может иметь много продуктов
+}

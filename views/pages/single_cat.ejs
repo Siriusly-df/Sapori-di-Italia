@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapori di Italia</title>
+    <link rel="stylesheet" href="../css/product-cards.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="icon" href="/icons/icon.png">
+    <script src="../js/menu.js" defer></script>
+    <script src="/js/cart_menu.js" defer></script>
+    <script src="/js/order.js" defer></script>
+    <script src="/js/pagination.js" defer></script>
+</head>
+<body>
+  <body>
+
+    <%- include('../includes/header') %>
+
+    <main class="main">
+
+      <div class="breadcrumb">
+        <ol class="breadcrumb-product-info">
+          <li onclick="location.href='/cat'" class="product-info">Меню</li> 
+          <li class="product-info-separator">/</li>
+          <li class="product-info" onclick="location.href='/cat/<%= catname %>'"><%= title %></li> 
+        </ol>
+      </div>
+    
+      <h2 class="main-title"><%= title %></h2>
+    
+      <div class="box-conteiner">
+        <% data.forEach(item => { %> 
+          <div onclick="location.href='<%= `/cat/${catname}/${item.id}` %>'" class="box">
+            <div class="img-content-menu">
+              <img class="img-content" src="/images/<%= item.image %>" alt="<%= item.name %>">
+            </div>
+            <div class="info">
+              <h3 class="title"><%= item.name %></h3>
+            </div>
+          </div>
+        <% }); %>
+      </div> 
+
+      <div id="product-list" 
+        data-current-page="<%= currentPage %>" 
+        data-total-pages="<%= totalPages %>" 
+        data-catname="<%= catname %>">
+      </div>
+
+      <div class="pagination" id="pagination">
+          <% for (let i = 1; i <= totalPages; i++) { %>
+            <button class="page-btn <%= currentPage === i ? 'active' : '' %>" 
+                 data-page="<%= i %>">
+                   <%= i %>
+             </button>
+          <% } %>
+      </div>
+
+    </main>
+
+     <div class="line"></div>
+
+     <%- include('../includes/footer') %>
+
+</body>
+</html>
